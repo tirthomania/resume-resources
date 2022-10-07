@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Sep  9 21:56:48 2022
+Created on Fri Sep  9 21:54:37 2022
 
-@author: ABISHEK SAVALIYA
+@author: amijo
 """
 
-import matplotlib.pyplot as plt;
 import numpy as np
-
-n=15
-sum=0
-f=20
-t = np.linspace(-20,20,100)
-for i in range (1,1000,2):
-    sum += (4*(np.sin(np.pi*i*f*t)))/(i*np.pi)
-
-plt.plot(t,sum, 'orange')   
-plt.show();  
+import matplotlib.pyplot as plt
+f = 20
+t = np.linspace(-10,10,100)
+bh = np.zeros(len(t))
+for n in range (1,1001,2):
+      bh = bh + (4/(n*np.pi))*np.sin(2*np.pi*f*n*t);
+      print(n)
+plt.plot(t, bh);
+plt.show();
